@@ -52,7 +52,6 @@ $(document).ready(function() {
 			firstTrainTime: firstTrainTime,
 			frequency: frequency
 		};
-		console.log(newTrain);
 		//Push object data to database and clear form fields
 		database.ref().push(newTrain);
 		$("#trainName").val("");
