@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	//Initialize firebase
 	var config = {
-	    apiKey: "AIzaSyDqCi-NpMnfvwb4t8QnNQSkDRiCexHY8Lo",
-	    authDomain: "train-scheduler-6867c.firebaseapp.com",
-	    databaseURL: "https://train-scheduler-6867c.firebaseio.com",
-	    projectId: "train-scheduler-6867c",
-	    storageBucket: "train-scheduler-6867c.appspot.com",
-	    messagingSenderId: "94786133514"
+		apiKey: "AIzaSyDqCi-NpMnfvwb4t8QnNQSkDRiCexHY8Lo",
+		authDomain: "train-scheduler-6867c.firebaseapp.com",
+		databaseURL: "https://train-scheduler-6867c.firebaseio.com",
+		projectId: "train-scheduler-6867c",
+		storageBucket: "train-scheduler-6867c.appspot.com",
+		messagingSenderId: "94786133514"
 	  };
 	firebase.initializeApp(config);
 
@@ -39,25 +39,25 @@ $(document).ready(function() {
 
 	//Add on click for submit button
 	$("#addTrain").on("click", function(event) {
-			event.preventDefault();
-			//Grab user input
-			var trainName = $("#trainName").val().trim();
-			var destination = $("#destination").val().trim();
-			var firstTrainTime = moment($("#firstTrain").val().trim(), "HH:mm").format("HH:mm");
-			var frequency = $("#frequency").val().trim();
-			//Store user input in an object
-			var newTrain = {
-				name: trainName,
-				destination: destination,
-				firstTrainTime: firstTrainTime,
-				frequency: frequency
-			};
-			console.log(newTrain);
-			//Push object data to database and clear form fields
-			database.ref().push(newTrain);
-			$("#trainName").val("");
-			$("#destination").val("");
-			$("#firstTrain").val("");
-			$("#frequency").val("");
-		});
+		event.preventDefault();
+		//Grab user input
+		var trainName = $("#trainName").val().trim();
+		var destination = $("#destination").val().trim();
+		var firstTrainTime = moment($("#firstTrain").val().trim(), "HH:mm").format("HH:mm");
+		var frequency = $("#frequency").val().trim();
+		//Store user input in an object
+		var newTrain = {
+			name: trainName,
+			destination: destination,
+			firstTrainTime: firstTrainTime,
+			frequency: frequency
+		};
+		console.log(newTrain);
+		//Push object data to database and clear form fields
+		database.ref().push(newTrain);
+		$("#trainName").val("");
+		$("#destination").val("");
+		$("#firstTrain").val("");
+		$("#frequency").val("");
+	});
 });
