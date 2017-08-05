@@ -61,7 +61,3 @@ $(document).ready(function() {
 			$("#frequency").val("");
 		});
 });
-
-//To do:
-//Next arrival- first train time plus frequency over and over until interval directly after the current time
-//Minutes away- difference in minutes between next arrival and the current time
