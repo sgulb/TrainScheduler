@@ -1,0 +1,22 @@
+body {
+	background-image: url("cork-wallet.png");
+}
+
+.jumbotron {
+	background-image: url("cork-wallet.png");
+	color: #000;
+	margin-bottom: 0px;
+	padding: 2rem 1rem;
+}
+
+.card {
+	border-color: #337ab7;
+}
+
+.card-header {
+	background-color: #337ab7;
+}
+
+h4 {
+	color: #fff;
+}
